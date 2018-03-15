@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+	<title>Photo Studio</title>
+	<link rel="stylesheet" href="./css/style1.css">
+</head>
+<body>
+<header>
+      <div class="container">
+        <div id="brand">
+          <h2><a href="PhotoStudio.html"><img src="./img/logo02.png" width="200" height="105" ></a>     Creating memories </h2>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="PhotoStudio.html">Home</a></li>
+            <li><a href="galerie.php">Galerie</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li class="actual"><a href="despre.html">Despre noi</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="despre">
+      <div id="info">
+      <h2>Despre noi</h2>
+      <p>Salut, suntem Cristian, Andra, Marius si Ana! Am inceput sa ne jucam de-a fotografia prin anul 2008 iar doi ani mai tarziu am renuntat la job-urile noastre de atunci, pentru a ne dedica exclusiv freelancing-ului. 2010 a fost anul in care am deschis unul din primele studiouri foto din Cluj dedicate exclusiv fotografiei de familie sub sigla Photo Studio.
+      Cativa ani mai tarziu am vandut spatiul in care ne desfasuram activitatea si ne-am concentrat mai mult pe sedintele foto outdoor si pe fotografia comerciala, colaborand cu multe hoteluri, restaurante sau companii care aveau nevoie de fotografii profesionale pentru business-ul lor.</p>
+      <p>
+      Am inceput, de altfel, sa ne indreptam atentia inspre fotografia nuntilor si ne putem lauda cu peste 150 de nunti documentate de-a lungul timpului.</p>
+      <p>
+      Suntem foarte buni in ceea ce facem. O zicem si noi, ca doar nu ne rusinam sa ne laudam, dar o zic si cei multi care au colaborat cu noi. De la parinti care se bucura de fotografiile unei sedinte foto sau ale unui botez si pana la directori de companii sau oameni de PR, reusim sa fim pe aceeasi lungime de unda si sa ne ridicam mereu la standarde inalte.</p>
+      <p>
+      Astfel, pentru o sedinta foto (de familie, personala sau corporate), pentru fotografierea unui botez, eveniment corporate sau alt tip de fotografie comerciala, suntem pregatiti sa raspundem solicitarii si sa te ajutam sa ai fotografii excelente si o experienta placuta.
+      </p>        
+      </div>
+<div id="echipa">
+      <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="./img/Cristian.png" style="width:100%">
+    <div class="text">Cristian</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="./img/Andra.png" style="width:100%">
+    <div class="text">Andra</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="./img/Marius.png" style="width:100%">
+    <div class="text">Marius</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="./img/Ana.png" style="width:100%">
+    <div class="text">Ana</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    </section>
+
+    
+    <footer>
+      <p>Photo Studio, Copyright &copy; 2018</p>
+    </footer>
+
+
+
+
+</body>
+</html>
